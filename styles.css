@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap");
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0b1020, #060812);
+  color: white;
+}
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 280px;
+  background: #0c1124;
+  padding: 24px;
+  position: fixed;
+  height: 100vh;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  font-family: "Playfair Display";
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.moon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: inset -4px -4px 0 #bca6ff;
+}
+
+.nav button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #ccc;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nav button.active,
+.nav button:hover {
+  background: rgba(140,120,220,0.3);
+  color: white;
+}
+
+.main {
+  margin-left: 280px;
+  padding: 40px;
+  width: 100%;
+}
+
+.page { display: none; }
+.page.active { display: block; }
+
+.main-title {
+  font-family: "Playfair Display";
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: rgba(22,26,46,0.7);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+
+  max-width: 1100px;   /* controls total width */
+  margin: 0 auto;      /* centers the grid */
+}
+
+.tip-card {
+  background: rgba(22,26,46,0.7);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.btn-row { display: flex; gap: 20px; }
+
+.big-btn {
+  padding: 14px 26px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary { background: #9c83e5; }
+.secondary { opacity: 0.4; }
+
+.sound-item {
+  padding: 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

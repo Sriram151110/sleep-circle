@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sleep Circle</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="moon"></div>
+      <span>Sleep Circle</span>
+    </div>
+
+    <nav class="nav">
+      <button class="active" data-page="home">Home</button>
+      <button data-page="tips">Tips</button>
+      <button data-page="tracking">Sleep Tracking</button>
+      <button data-page="soundscapes">Soundscapes</button>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <h1 class="main-title">Sleep Circle</h1>
+
+      <div class="card">
+        <h2>What is Sleep Circle?</h2>
+        <p>
+          Sleep Circle is a simple, teen-focused sleep improvement website designed to help users build healthier sleep habits. It combines easy-to-follow sleep tips, a basic sleep tracker to monitor routines, and calming soundscapes that promote relaxation. The goal is to make improving sleep less stressful and more achievable by breaking it into small, manageable steps.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Why is sleep important?</h2>
+        <p>
+         Good sleep is essential for physical health, mental focus, and emotional balance. Consistent sleep improves memory, concentration, mood, and energy levels, which are especially important for teenagers managing school and daily stress. A regular sleep routine allows the body and brain to rest, recover, and function properly throughout the day.
+        </p>
+      </div>
+    </section>
+
+    <!-- TIPS -->
+    <section id="tips" class="page">
+      <h1 class="main-title">Sleep Tips</h1>
+
+      <div class="grid">
+        <div class="tip-card">
+          <h2>Tip 1</h2>
+          <h3>Stick to a Schedule</h3>
+          <p>Going to bed and waking up at the same time every day helps regulate your body’s internal clock. A consistent schedule makes it easier to fall asleep, improves sleep quality, and helps you feel more alert during the day even on school mornings</p>
+        </div>
+
+        <div class="tip-card">
+          <h2>Tip 2</h2>
+          <h3>Limit Screen Time</h3>
+          <p>Phones, tablets, and laptops emit blue light that reduces melatonin, the hormone that controls sleep. Avoid screens at least 30 minutes before bed and try calming activities like reading or journaling instead.</p>
+        </div>
+
+        <div class="tip-card">
+          <h2>Tip 3</h2>
+          <h3>Watch Caffeine</h3>
+          <p>Caffeine stays in your body for several hours and can make it harder to fall asleep. Avoid coffee, energy drinks, and cola after the afternoon to ensure your body is ready to rest at night</p>
+        </div>
+
+        <div class="tip-card">
+          <h2>Tip 4</h2>
+          <h3>Relax Before Bed</h3>
+          <p>Create a relaxing bedtime routine to signal your brain that it’s time to sleep. Activities like stretching, deep breathing, meditation, or listening to calm music can help reduce stress and prepare your body for rest.</p>
+        </div>
+
+        <div class="tip-card">
+          <h2>Tip 5</h2>
+          <h3>Cool Room</h3>
+          <p>A slightly cool room helps your body temperature drop naturally, which improves sleep quality. Keeping your room dark, quiet, and cool can make it easier to fall asleep and stay asleep through the night.</p>
+        </div>
+        <div class="tip-card">
+          <h2>Tip 6</h2>
+          <h3>Exercise Earlier</h3>
+          <p>Regular exercise improves sleep, mood, and energy levels. However, intense workouts too close to bedtime can make it harder to sleep, so try to finish exercising at least 3 hours before going to bed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACKING -->
+    <section id="tracking" class="page">
+      <h1 class="main-title">Sleep Tracking</h1>
+
+      <div class="btn-row">
+        <button class="big-btn primary" id="startBtn">Start Tracking</button>
+        <button class="big-btn secondary" id="stopBtn" disabled>Stop</button>
+      </div>
+
+      <div class="card">
+        <p id="trackingText">Press start when going to sleep.</p>
+        <h2 id="sleepTimer">00:00:00</h2>
+      </div>
+
+      <div class="card">
+        <h2>Sleep History</h2>
+
+        <div class="history-input">
+          <input type="date" id="sleepDate">
+          <input type="number" id="sleepHours" placeholder="Hours slept">
+          <button onclick="addSleep()">Add</button>
+          <button onclick="clearHistory()">Clear</button>
+        </div>
+
+        <div id="historyList"></div>
+      </div>
+    </section>
+
+    <!-- SOUNDS -->
+    <section id="soundscapes" class="page">
+      <h1 class="main-title">Soundscapes</h1>
+
+      <div class="card">
+        <div class="sound-item" data-sound="rain">🌧 Rain</div>
+        <div class="sound-item" data-sound="ocean">🌊 Ocean</div>
+        <div class="sound-item" data-sound="white">📻 White Noise</div>
+        <button id="stopMusicBtn" disabled>Stop Sound</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
